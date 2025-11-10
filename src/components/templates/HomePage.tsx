@@ -23,7 +23,7 @@ export const HomePage: React.FC<HomePageProps> = ({ user, posts, categories, onL
   if (!user) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4">
-        <LoginForm onSuccess={() => window.location.reload()} />
+        <LoginForm />
       </div>
     )
   }
@@ -70,7 +70,7 @@ export const HomePage: React.FC<HomePageProps> = ({ user, posts, categories, onL
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Post Form */}
           <div className="lg:col-span-1">
-            <PostForm categories={categories} onSuccess={() => window.location.reload()} />
+            <PostForm categories={categories} />
           </div>
 
           {/* Right Column - Post List */}

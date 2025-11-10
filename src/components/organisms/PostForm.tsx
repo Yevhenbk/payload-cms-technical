@@ -100,6 +100,7 @@ export const PostForm: React.FC<PostFormProps> = ({ categories, onSuccess }) => 
         })
         setIsSlugManuallyEdited(false)
         onSuccess?.()
+        window.location.reload()
       } else {
         setServerError(result.error || 'Failed to create post')
       }

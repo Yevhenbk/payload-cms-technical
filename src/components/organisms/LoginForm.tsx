@@ -53,6 +53,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
 
       if (result.success) {
         onSuccess?.()
+        window.location.reload()
       } else {
         setServerError(result.error || 'Authentication failed')
       }
