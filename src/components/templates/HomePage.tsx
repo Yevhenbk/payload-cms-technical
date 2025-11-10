@@ -5,6 +5,7 @@
 
 'use client'
 
+import Link from 'next/link'
 import { LoginForm, PostForm, PostList } from '@/components/organisms'
 import { UserGreeting } from '@/components/molecules'
 import { Button } from '@/components/atoms'
@@ -44,7 +45,7 @@ export const HomePage: React.FC<HomePageProps> = ({ user, posts, onLogout }) => 
 
         {/* Admin Link */}
         <div className="mb-8 flex gap-4">
-          <a
+          <Link
             href="/admin"
             className="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors shadow-sm"
           >
@@ -63,7 +64,7 @@ export const HomePage: React.FC<HomePageProps> = ({ user, posts, onLogout }) => 
               />
             </svg>
             Admin Dashboard
-          </a>
+          </Link>
         </div>
 
         {/* Content Grid */}
